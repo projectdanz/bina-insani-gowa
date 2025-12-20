@@ -1,0 +1,325 @@
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MessageCircle,
+  Youtube,
+  Instagram,
+  Music,
+  Heart,
+  Send,
+  MapPin,
+} from "lucide-react";
+import Button from "../../Components/Button";
+import SectionHeader from "../../Components/SectionHeader";
+
+const Contact = () => {
+  const contactInfo = [
+    {
+      icon: <MessageCircle className="w-6 h-6" />,
+      label: "WhatsApp Admin 1",
+      value: "+62 859-3657-2722",
+      href: "https://wa.me/+6285936572722",
+      color: "bg-green-50 text-green-600",
+    },
+    {
+      icon: <MessageCircle className="w-6 h-6" />,
+      label: "WhatsApp Admin 2",
+      value: "+62 812-4244-4227",
+      href: "https://wa.me/+6281242444227",
+      color: "bg-green-50 text-green-600",
+    },
+    {
+      icon: <Mail className="w-6 h-6" />,
+      label: "Email",
+      value: "islambinainsanis@gmail.com",
+      href: "mailto:islambinainsanis@gmail.com",
+      color: "bg-blue-50 text-blue-600",
+    },
+    {
+      icon: <Phone className="w-6 h-6" />,
+      label: "Telepon",
+      value: "0812-4244-4227",
+      href: "tel:081242444227",
+      color: "bg-amber-50 text-amber-600",
+    },
+  ];
+
+  const socialMedia = [
+    {
+      icon: <Youtube />,
+      label: "YouTube",
+      name: "Sekolah Islam Bina Insani",
+      href: "#",
+    },
+    {
+      icon: <Instagram />,
+      label: "Instagram",
+      name: "Sekolah Islam Bina Insani",
+      href: "#",
+    },
+    {
+      icon: <Music />,
+      label: "TikTok",
+      name: "Sekolah Islam Bina Insani",
+      href: "#",
+    },
+  ];
+
+  return (
+    <div className="pt-24 pb-20 overflow-x-hidden">
+      {/* Contact Hero */}
+      <section className="bg-emerald-50 py-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-60 -mr-48 -mt-48"></div>
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <SectionHeader title="Hubungi Kami" subtitle="Kontak & Informasi" />
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto -mt-8">
+            Punya pertanyaan atau ingin mendaftarkan putra-putri Anda? Kami siap
+            membantu memberikan informasi terbaik untuk masa depan Ananda.
+          </p>
+        </div>
+      </section>
+
+      {/* Main Contact Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
+          <div className="flex flex-col lg:flex-row gap-16">
+            {/* Contact Info Grid */}
+            <div className="w-full lg:w-1/2 space-y-12">
+              <div>
+                <h3 className="text-2xl font-black text-emerald-950 mb-8 border-l-4 border-emerald-500 pl-4">
+                  Layanan Cepat
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {contactInfo.map((info, index) => (
+                    <motion.a
+                      key={index}
+                      href={info.href}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className="p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all group"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div
+                        className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${info.color}`}
+                      >
+                        {info.icon}
+                      </div>
+                      <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">
+                        {info.label}
+                      </p>
+                      <p className="text-emerald-900 font-bold break-words">
+                        {info.value}
+                      </p>
+                    </motion.a>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-black text-emerald-950 mb-8 border-l-4 border-emerald-500 pl-4">
+                  Media Sosial
+                </h3>
+                <div className="flex flex-wrap gap-4">
+                  {socialMedia.map((social, index) => (
+                    <motion.a
+                      key={index}
+                      href={social.href}
+                      whileHover={{ y: -5 }}
+                      className="flex items-center gap-3 px-6 py-3 rounded-full bg-emerald-50 text-emerald-700 font-bold border border-emerald-100 hover:bg-emerald-600 hover:text-white transition-all shadow-sm"
+                    >
+                      {social.icon}
+                      <span>{social.label}</span>
+                    </motion.a>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="w-full lg:w-1/2 bg-white rounded-[2.5rem] shadow-2xl shadow-emerald-900/10 border border-emerald-50 p-8 md:p-12"
+            >
+              <h3 className="text-2xl font-black text-emerald-950 mb-8">
+                Kirim Pesan
+              </h3>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-emerald-900 ml-1">
+                      Nama Lengkap
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full px-6 py-4 rounded-2xl bg-emerald-50 border-transparent focus:bg-white focus:border-emerald-500 transition-all outline-none text-emerald-950 placeholder-emerald-800/20"
+                      placeholder="Ananda/Bapak/Ibu"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-emerald-900 ml-1">
+                      Nomor WA
+                    </label>
+                    <input
+                      type="tel"
+                      className="w-full px-6 py-4 rounded-2xl bg-emerald-50 border-transparent focus:bg-white focus:border-emerald-500 transition-all outline-none text-emerald-950 placeholder-emerald-800/20"
+                      placeholder="0812..."
+                    />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-emerald-900 ml-1">
+                    Subjek
+                  </label>
+                  <select className="w-full px-6 py-4 rounded-2xl bg-emerald-50 border-transparent focus:bg-white focus:border-emerald-500 transition-all outline-none text-emerald-950 appearance-none">
+                    <option>Informasi Pendaftaran</option>
+                    <option>Kerjasama</option>
+                    <option>Kritik & Saran</option>
+                    <option>Lainnya</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-emerald-900 ml-1">
+                    Pesan
+                  </label>
+                  <textarea
+                    rows="4"
+                    className="w-full px-6 py-4 rounded-2xl bg-emerald-50 border-transparent focus:bg-white focus:border-emerald-500 transition-all outline-none text-emerald-950 placeholder-emerald-800/20"
+                    placeholder="Tuliskan pesan Anda di sini..."
+                  ></textarea>
+                </div>
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="w-full py-5 rounded-2xl shadow-xl shadow-emerald-600/20 group"
+                  rightIcon={
+                    <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  }
+                >
+                  Kirim Sekarang
+                </Button>
+              </form>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Donation Section (Palestine) */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-[3rem] overflow-hidden relative"
+          >
+            {/* Background Texture/Pattern */}
+            <div className="absolute inset-0 opacity-10 pointer-events-none">
+              <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent"></div>
+            </div>
+
+            <div className="flex flex-col lg:flex-row items-center relative z-10">
+              {/* Palestine Info */}
+              <div className="w-full lg:w-1/2 p-12 lg:p-20 text-white">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600/20 border border-red-500/30 text-red-500 text-xs font-black uppercase tracking-widest mb-8">
+                  <Heart size={14} className="fill-current" /> Bina Insani
+                  Peduli
+                </div>
+                <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
+                  Donasi untuk <br />
+                  <span className="text-red-500">Palestina</span>
+                </h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-lg">
+                  Mari ulurkan tangan untuk saudara kita di Palestina. 100%
+                  donasi akan disalurkan melalui lembaga terpercaya untuk
+                  bantuan kemanusiaan, medis, dan pangan.
+                </p>
+
+                <div className="space-y-4 mb-10">
+                  <div className="p-6 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">
+                        Bank Transfer (BSI)
+                      </p>
+                      <p className="text-xl font-black tracking-wider">
+                        711 222 333 4
+                      </p>
+                      <p className="text-sm text-gray-400">
+                        a.n. Yayasan Bina Insani (Peduli Palestina)
+                      </p>
+                    </div>
+                    <button className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 font-bold transition-all text-sm">
+                      Salin
+                    </button>
+                  </div>
+                </div>
+
+                <Button
+                  variant="accent"
+                  size="lg"
+                  className="shadow-red-500/20"
+                >
+                  Konfirmasi Donasi
+                </Button>
+              </div>
+
+              {/* Decorative side */}
+              <div className="w-full lg:w-1/2 p-12 lg:p-20 flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-sm aspect-square bg-emerald-950/30 rounded-[3rem] border border-white/5 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-red-600/40">
+                      <Heart size={48} className="text-white fill-current" />
+                    </div>
+                    <p className="text-2xl font-black text-white px-8">
+                      "Barang siapa yang melepaskan satu kesusahan seorang
+                      mukmin, maka Allah akan melepaskan satu kesusahan darinya
+                      di hari kiamat."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <SectionHeader title="Lokasi Sekolah" subtitle="Kunjungi Kami" />
+          <div className="h-[450px] rounded-[2.5rem] overflow-hidden bg-gray-100 border-8 border-gray-50 relative shadow-2xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15892.408713508127!2d119.467406852922!3d-5.188243621419356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee3664532c121%3A0xe67f920f01a61329!2sTK%20-%20SDIT%20Islam%20Bina%20Insani%20Gowa!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div className="absolute bottom-8 right-8 bg-white p-6 rounded-2xl shadow-2xl max-w-xs border border-emerald-50">
+              <div className="flex gap-4 items-start">
+                <MapPin className="text-emerald-600 shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-bold text-emerald-950">Alamat Utama</h4>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Jl. Pallantikang 1, Tombolo, Somba Opu, Kabupaten Gowa,
+                    Sulawesi Selatan
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Contact;

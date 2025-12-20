@@ -1,149 +1,149 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Button from "./Button";
+import { Menu, X } from "lucide-react";
 
 /**
  * Flexible Navbar Component
- *
- * @param {Object} props
- * @param {'header' | 'footer'} [props.type='header'] - Type of navbar
- * @param {Array<{label: string, href: string}>} props.links - Navigation links
- * @param {React.ReactNode} [props.logo] - Optional logo/brand element
- * @param {string} [props.className] - Additional classes for the container
  */
-const Navbar = ({ type = "header", links = [], logo, className = "" }) => {
+const Navbar = ({ links = [], logo, className = "" }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Header Navbar (Desktop: Horizontal, Mobile: Hamburger)
-  if (type === "header") {
-    return (
-      <nav
-        className={`w-full bg-white shadow-sm sticky top-0 z-50 ${className}`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20 items-center">
-            {/* Logo */}
-            <div className="flex-shrink-0 flex items-center">
-              {logo || (
-                <div className="text-2xl font-bold text-primary">
-                  Bina Insani Gowa
-                </div>
-              )}
-            </div>
+  return (
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/80 backdrop-blur-md py-3 shadow-md"
+          : "bg-transparent py-5"
+      } ${className}`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0 flex items-center group">
+            {logo || (
+              <div
+                className={`text-2xl font-bold transition-colors ${
+                  scrolled ? "text-emerald-700" : "text-emerald-800"
+                }`}
+              >
+                Bina <span className="text-amber-500">Insani</span>
+              </div>
+            )}
+          </Link>
 
-            {/* Desktop Links */}
-            <div className="hidden md:flex items-center space-x-4">
-              {links.map((link, index) => (
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center space-x-2">
+            {links.map((link, index) => {
+              const isActive = location.pathname === link.href;
+              return (
                 <Button
                   key={index}
                   variant="ghost"
-                  href={link.href}
-                  className="!px-3 !py-2 text-primary hover:text-accent transition-colors"
+                  to={link.href}
+                  className={`!px-4 !py-2 transition-all ${
+                    isActive
+                      ? "text-emerald-700 bg-emerald-50 scale-105"
+                      : scrolled
+                      ? "text-gray-700 hover:text-emerald-600"
+                      : "text-emerald-900 hover:text-emerald-700 hover:bg-white/20"
+                  }`}
                 >
                   {link.label}
                 </Button>
-              ))}
-            </div>
+              );
+            })}
+            <Button
+              variant="primary"
+              to="/contact"
+              className="ml-4 shadow-emerald-500/20"
+            >
+              Daftar Sekarang
+            </Button>
+          </div>
 
-            {/* Mobile Menu Button */}
-            <div className="md:hidden flex items-center">
-              <button
-                onClick={toggleMenu}
-                className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:bg-slate-100 focus:outline-none"
-              >
-                <span className="sr-only">Open main menu</span>
-                <svg
-                  className="block h-8 w-8"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
-            </div>
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={toggleMenu}
+              className={`p-2 rounded-lg transition-colors ${
+                scrolled
+                  ? "text-emerald-700 hover:bg-emerald-50"
+                  : "text-emerald-800 hover:bg-white/20"
+              }`}
+            >
+              {isOpen ? (
+                <X className="h-7 w-7" />
+              ) : (
+                <Menu className="h-7 w-7" />
+              )}
+            </button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
         <div
-          className={`fixed inset-0 z-50 md:hidden transition-transform duration-300 transform ${
-            isOpen ? "translate-x-0" : "translate-x-full"
+          className="absolute inset-0 bg-emerald-900/40 backdrop-blur-sm"
+          onClick={toggleMenu}
+        />
+        <div
+          className={`absolute right-4 top-20 w-[calc(100%-2rem)] max-w-sm bg-white rounded-2xl shadow-2xl overflow-hidden transition-transform duration-500 ${
+            isOpen ? "translate-y-0" : "-translate-y-10"
           }`}
         >
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-primary/90 backdrop-blur-sm"
-            onClick={toggleMenu}
-          />
-
-          {/* Menu Drawer */}
-          <div className="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-xl overflow-y-auto">
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-8">
-                <div className="text-xl font-bold text-primary">Menu</div>
-                <button
-                  onClick={toggleMenu}
-                  className="p-2 rounded-md text-primary hover:bg-slate-100"
+          <div className="p-6 space-y-3">
+            {links.map((link, index) => {
+              const isActive = location.pathname === link.href;
+              return (
+                <Button
+                  key={index}
+                  variant="ghost"
+                  to={link.href}
+                  className={`!justify-start text-lg w-full ${
+                    isActive
+                      ? "text-emerald-700 bg-emerald-50"
+                      : "text-gray-700"
+                  }`}
+                  onClick={() => setIsOpen(false)}
                 >
-                  <span className="sr-only">Close menu</span>
-                  <svg
-                    className="h-8 w-8"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-
-              <div className="flex flex-col space-y-4">
-                {links.map((link, index) => (
-                  <Button
-                    key={index}
-                    variant="ghost"
-                    href={link.href}
-                    className="!justify-start text-lg w-full"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.label}
-                  </Button>
-                ))}
-              </div>
+                  {link.label}
+                </Button>
+              );
+            })}
+            <div className="pt-4 mt-4 border-t border-gray-100">
+              <Button
+                variant="primary"
+                to="/contact"
+                className="w-full"
+                onClick={() => setIsOpen(false)}
+              >
+                Daftar Sekarang
+              </Button>
             </div>
           </div>
         </div>
-      </nav>
-    );
-  }
-
-  // Footer Navbar (Always Vertical)
-  return (
-    <div className={`flex flex-col space-y-2 ${className}`}>
-      {links.map((link, index) => (
-        <a
-          key={index}
-          href={link.href}
-          className="text-white/80 hover:text-accent transition-colors text-sm font-medium py-1"
-        >
-          {link.label}
-        </a>
-      ))}
-    </div>
+      </div>
+    </nav>
   );
 };
 
