@@ -1,12 +1,15 @@
-import { useState } from 'react'
+import Footer from "./Page/Footer";
+import Seaction__main from "./Page/HomePage/seaction__main";
+import Seaction__jumlah from "./Page/HomePage/seaction__jumlah";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+    return (
+        <div>
+            <Seaction__main />
+            <Seaction__jumlah />
+            <Footer />
+        </div>
+    );
+};
 
-  return (
-    <>
-    </>
-  )
-}
-
-export default App
+export default App;
