@@ -121,6 +121,7 @@ const Seaction__programs = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => window.open("https://wa.me/6281234567890", "_blank")}
               className="px-10 py-5 bg-emerald-950 text-white rounded-2xl font-bold text-lg shadow-xl hover:bg-emerald-900 transition-all"
             >
               Hubungi Admin <ArrowRight className="inline-block ml-2 w-5 h-5" />

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import KepsekImage from "../../assets/image/hero_image_kepsek.jpeg"
 
 const Seaction__greeting = () => {
   return (
@@ -23,7 +24,7 @@ const Seaction__greeting = () => {
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-emerald-200 shadow-2xl">
                 {/* Replace with actual principal image when available */}
                 <div className="w-full h-full flex items-center justify-center text-emerald-800 font-bold bg-emerald-100">
-                  Foto Kepala Sekolah
+                  <img src={KepsekImage} alt="" />
                 </div>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl">
@@ -87,11 +88,11 @@ const Seaction__greeting = () => {
                 <p className="font-bold text-emerald-900">
                   Wassalamu’alaikum warahmatullahi wabarakatuh.
                 </p>
-                <div className="mt-8 flex items-center gap-4">
+                {/* <div className="mt-8 flex items-center gap-4">
                   <div className="h-10 w-40 bg-gray-100 rounded flex items-center justify-center text-gray-400 italic text-sm">
                     Tanda Tangan
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </motion.div>

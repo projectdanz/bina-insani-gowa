@@ -23,7 +23,6 @@ const Footer = () => {
   const socialLinks = [
     { icon: <Youtube size={20} />, href: "#", label: "YouTube" },
     { icon: <Instagram size={20} />, href: "#", label: "Instagram" },
-    { icon: <Music size={20} />, href: "#", label: "TikTok" },
   ];
 
   return (
@@ -121,6 +120,7 @@ const Footer = () => {
             variant="accent"
             to="/contact"
             className="shadow-amber-400/10"
+            onClick={() => window.open("https://wa.me/6281234567890", "_blank")}
           >
             Hubungi Sekarang
           </Button>

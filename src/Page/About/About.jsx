@@ -59,7 +59,7 @@ const About = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-emerald-600/5 rounded-3xl -rotate-2"></div>
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-emerald-100 aspect-video flex items-center justify-center">
-                  <History size={80} className="text-emerald-200" />
+                  {/* <img src={hero_location} alt="" /> */}
                   <p className="absolute bottom-6 left-6 text-emerald-800 font-bold bg-white/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-sm">
                     Didirikan Tahun 2020
                   </p>

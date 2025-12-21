@@ -10,10 +10,10 @@ const Home = () => {
     <div className="overflow-x-hidden">
       <Seaction__main />
       <Seaction__greeting />
-      <Seaction__activities />
       <Seaction__programs />
       <Seaction__jumlah />
       <Seaction__cardPerformance />
+      <Seaction__activities />
     </div>
   );
 };
