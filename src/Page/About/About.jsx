@@ -19,6 +19,27 @@ const About = () => {
     "Menyelenggarakan proses pembelajaran yang kreatif dan menyenangkan.",
   ];
 
+  const tkPrograms = [
+    "Hafalan Surah-surah",
+    "Sholat Dhuha Setiap Hari",
+    "BTQ (Baca Tulis Al-Qur'an)",
+    "Baca Tulis Bahasa Indonesia (BTI)",
+    "Bacaan Sholat",
+    "Cooking Class",
+    "Manasik Haji dan Umroh, Futsal dan Senam Sehat",
+    "Dan lain-lain",
+  ];
+
+  const sditPrograms = [
+    "Menguasai dua Bahasa Bilingual (Arab dan Inggris)",
+    "Hafalan Juz 30",
+    "Hafalan Hadits",
+    "Mengaji Metode tilawati",
+    "OUTING CLASS",
+    "Kegiatan Schooling",
+    "Dan lain-lain",
+  ];
+
   return (
     <div className="pt-24 pb-20 overflow-x-hidden">
       {/* Page Header (Hero Lite) */}
@@ -60,6 +81,9 @@ const About = () => {
                 <div className="absolute -inset-4 bg-emerald-600/5 rounded-3xl -rotate-2"></div>
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-emerald-100 aspect-video flex items-center justify-center">
                   {/* <img src={hero_location} alt="" /> */}
+                  <div className="absolute inset-0 bg-emerald-900/10 flex items-center justify-center">
+                    <History size={64} className="text-emerald-800/20" />
+                  </div>
                   <p className="absolute bottom-6 left-6 text-emerald-800 font-bold bg-white/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-sm">
                     Didirikan Tahun 2020
                   </p>
@@ -83,6 +107,13 @@ const About = () => {
                   menaungi jenjang Taman Kanak-Kanak (TK) dan Sekolah Dasar
                   Islam Terpadu (SDIT).
                 </p>
+                <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 mb-4">
+                  <p className="text-emerald-900 font-bold flex items-center gap-2">
+                    <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
+                    Kurikulum yang digunakan:{" "}
+                    <span className="text-emerald-700">Kurikulum Merdeka</span>
+                  </p>
+                </div>
                 <p>
                   Fokus utama pendidikan di SDIT Bina Insani adalah pengembangan
                   dua bahasa asing—Bahasa Arab dan Bahasa Inggris (Bilingual)—di
@@ -95,6 +126,77 @@ const About = () => {
                   tekad kuat untuk menghadirkan pendidikan Islam yang
                   berkualitas di Gowa.
                 </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Flagship Programs */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-50 rounded-full blur-3xl opacity-50 -mr-48 -mt-48"></div>
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
+          <SectionHeader
+            title="Program Unggulan"
+            subtitle="Keunggulan Kurikulum"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
+            {/* TK Programs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="inline-block px-4 py-1 rounded bg-amber-100 text-amber-700 font-bold text-sm tracking-widest uppercase">
+                TK Islam Bina Insani
+              </div>
+              <div className="grid grid-cols-1 gap-4">
+                {tkPrograms.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-100 shadow-sm hover:border-amber-200 hover:bg-amber-50 transition-all group"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-sm group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                      {index + 1}
+                    </div>
+                    <span className="text-gray-700 font-medium">{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* SDIT Programs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="inline-block px-4 py-1 rounded bg-emerald-100 text-emerald-700 font-bold text-sm tracking-widest uppercase">
+                SDIT Islam Bina Insani
+              </div>
+              <div className="grid grid-cols-1 gap-4">
+                {sditPrograms.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-100 shadow-sm hover:border-emerald-200 hover:bg-emerald-50 transition-all group"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                      {index + 1}
+                    </div>
+                    <span className="text-gray-700 font-medium">{item}</span>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
