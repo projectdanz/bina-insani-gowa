@@ -1,4 +1,5 @@
 import Seaction__main from "./seaction__main";
+import Seaction__greetingChairman from "./seaction__greetingChairman";
 import Seaction__greeting from "./seaction__greeting";
 import Seaction__activities from "./seaction__activities";
 import Seaction__programs from "./seaction__programs";
@@ -9,6 +10,7 @@ const Home = () => {
   return (
     <div className="overflow-x-hidden">
       <Seaction__main />
+      <Seaction__greetingChairman />
       <Seaction__greeting />
       <Seaction__programs />
       <Seaction__jumlah />

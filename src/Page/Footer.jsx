@@ -4,13 +4,11 @@ import {
   Mail,
   Phone,
   MapPin,
-  Youtube,
-  Instagram,
-  Music,
   MessageCircle,
   Heart,
   ArrowRight,
 } from "lucide-react";
+import { FaTiktok, FaYoutube, FaInstagram } from "react-icons/fa6";
 import Button from "../Components/Button";
 
 const Footer = () => {
@@ -21,8 +19,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Youtube size={20} />, href: "#", label: "YouTube" },
-    { icon: <Instagram size={20} />, href: "#", label: "Instagram" },
+    { icon: <FaInstagram size={20} />, href: "https://www.instagram.com/sekolah.islam.bina.insani?igsh=MWFpcDJkdmV3aW55Zg==", target: "_blank", label: "Instagram" },
+    { icon: <FaYoutube size={20} />, href: "https://youtube.com/@sekolahislambinainsani?si=Qy7nMBDtQYel-teZ", target: "_blank", label: "YouTube" },
+    { icon: <FaTiktok size={20} />, href: "https://www.tiktok.com/@sekolahislambinainsani?_r=1&_t=ZS-92PRqnyAJj5", target: "_blank", label: "TikTok" },
   ];
 
   return (
