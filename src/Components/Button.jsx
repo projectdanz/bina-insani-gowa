@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 /**
  * Flexible Button Component
@@ -11,6 +12,7 @@ import React from "react";
  * @param {React.ReactNode} [props.leftIcon] - icon before text
  * @param {React.ReactNode} [props.rightIcon] - icon after text
  * @param {string} [props.href] - if provided, renders as <a>
+ * @param {string} [props.to] - if provided, renders as <Link> (for internal routing)
  * @param {string} [props.className] - additional classes
  * @param {React.ReactNode} props.children - button text/content
  */
@@ -22,23 +24,24 @@ const Button = ({
   leftIcon,
   rightIcon,
   href,
+  to,
   className = "",
   children,
   ...props
 }) => {
   const baseStyles =
-    "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-lg cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 whitespace-nowrap overflow-hidden";
+    "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-lg cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 whitespace-nowrap";
 
   const variants = {
     primary:
-      "bg-primary text-white border-2 border-primary hover:bg-transparent hover:text-primary shadow-lg shadow-primary/20",
+      "bg-emerald-600 text-white border-2 border-emerald-600 hover:bg-transparent hover:text-emerald-600 shadow-lg shadow-emerald-200",
     accent:
-      "bg-accent text-primary border-2 border-accent hover:bg-transparent hover:text-accent shadow-lg shadow-accent/20",
+      "bg-amber-400 text-emerald-900 border-2 border-amber-400 hover:bg-transparent hover:text-amber-500 shadow-lg shadow-amber-100",
     outline:
-      "bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white",
-    ghost: "bg-transparent text-primary hover:bg-primary/10",
+      "bg-transparent text-emerald-600 border-2 border-emerald-600 hover:bg-emerald-600 hover:text-white",
+    ghost: "bg-transparent text-emerald-600 hover:bg-emerald-50",
     light:
-      "bg-white text-primary border-2 border-white hover:bg-transparent hover:text-white shadow-lg shadow-white/10",
+      "bg-white text-emerald-600 border-2 border-white hover:bg-transparent hover:text-white shadow-lg shadow-white/10",
   };
 
   const sizes = {
@@ -82,6 +85,14 @@ const Button = ({
       )}
     </>
   );
+
+  if (to) {
+    return (
+      <Link to={to} className={combinedClasses} {...props}>
+        {content}
+      </Link>
+    );
+  }
 
   if (href) {
     return (

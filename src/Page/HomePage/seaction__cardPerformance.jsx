@@ -83,7 +83,7 @@ const Seaction__cardPerformance = () => {
                 <p className="text-gray-500 text-sm leading-relaxed flex-grow">
                   {item.description}
                 </p>
-                <div className="pt-4 mt-auto">
+                {/* <div className="pt-4 mt-auto">
                   <Button
                     variant={item.accent === "primary" ? "outline" : "accent"}
                     size="sm"
@@ -106,7 +106,7 @@ const Seaction__cardPerformance = () => {
                   >
                     Selengkapnya
                   </Button>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
