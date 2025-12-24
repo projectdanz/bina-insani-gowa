@@ -34,14 +34,17 @@ const Button = ({
 
   const variants = {
     primary:
-      "bg-emerald-600 text-white border-2 border-emerald-600 hover:bg-transparent hover:text-emerald-600 shadow-lg shadow-emerald-200",
+      "bg-primary text-white border-2 border-primary hover:bg-transparent hover:text-primary shadow-premium hover:shadow-primary/40",
     accent:
-      "bg-amber-400 text-emerald-900 border-2 border-amber-400 hover:bg-transparent hover:text-amber-500 shadow-lg shadow-amber-100",
+      "bg-secondary text-white border-2 border-secondary hover:bg-transparent hover:text-secondary shadow-premium hover:shadow-secondary/40",
+    purple:
+      "bg-primary text-white border-2 border-primary hover:bg-transparent hover:text-primary shadow-premium hover:shadow-primary/40",
     outline:
-      "bg-transparent text-emerald-600 border-2 border-emerald-600 hover:bg-emerald-600 hover:text-white",
-    ghost: "bg-transparent text-emerald-600 hover:bg-emerald-50",
+      "bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white shadow-soft hover:shadow-primary/20",
+    ghost: "bg-transparent text-primary hover:bg-primary/5 font-bold",
+    ghost2: "bg-transparent text-[#434393] hover:bg-[#434393]/5 font-bold",
     light:
-      "bg-white text-emerald-600 border-2 border-white hover:bg-transparent hover:text-white shadow-lg shadow-white/10",
+      "bg-white text-primary border-2 border-white hover:bg-transparent hover:text-white shadow-premium hover:shadow-white/20",
   };
 
   const sizes = {

@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import KepsekImage from "../../assets/image/hero_image_kepsek.jpeg"
+import KepsekImage from "../../assets/image/hero_image_kepsek.jpeg";
 
 const Seaction__greeting = () => {
   return (
-    <section className="py-20 bg-emerald-50 relative overflow-hidden">
+    <section className="py-20 bg-primary/5 relative overflow-hidden">
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100 rounded-full blur-3xl opacity-60 -mr-32 -mt-32"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-100 rounded-full blur-3xl opacity-50 -ml-40 -mb-40"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl opacity-60 -mr-32 -mt-32"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl opacity-50 -ml-40 -mb-40"></div>
 
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -20,18 +20,21 @@ const Seaction__greeting = () => {
             className="w-full lg:w-1/3"
           >
             <div className="relative group">
-              <div className="absolute -inset-4 bg-emerald-600/10 rounded-2xl scale-95 group-hover:scale-100 transition-transform duration-500"></div>
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-emerald-200 shadow-2xl">
-                {/* Replace with actual principal image when available */}
-                <div className="w-full h-full flex items-center justify-center text-emerald-800 font-bold bg-emerald-100">
-                  <img src={KepsekImage} alt="" />
+              <div className="absolute -inset-4 bg-primary/10 rounded-2xl scale-95 group-hover:scale-100 transition-transform duration-500"></div>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-primary/10 shadow-2xl">
+                <div className="w-full h-full flex items-center justify-center text-primary font-bold bg-primary/5">
+                  <img
+                    src={KepsekImage}
+                    alt="Kepala Sekolah"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl">
-                <p className="text-emerald-800 font-bold text-lg leading-tight">
+              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl border-l-4 border-primary">
+                <p className="text-primary font-bold text-lg leading-tight">
                   Hj. Rasidah, SE
                 </p>
-                <p className="text-emerald-600 text-sm font-medium">
+                <p className="text-secondary text-sm font-medium">
                   Kepala Sekolah
                 </p>
               </div>
@@ -47,15 +50,15 @@ const Seaction__greeting = () => {
             className="w-full lg:w-2/3"
           >
             <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
-              <div className="inline-block px-4 py-1 rounded bg-emerald-100 text-emerald-700 font-bold text-sm tracking-widest uppercase mb-4">
+              <div className="inline-block px-4 py-1 rounded bg-primary/10 text-primary font-bold text-sm tracking-widest uppercase mb-4">
                 Sambutan Kepala Sekolah
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-black text-emerald-900 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-black text-primary-950 leading-tight">
                 Assalamu’alaikum warahmatullahi wabarakatuh
               </h2>
 
-              <p className="font-medium text-emerald-800 italic border-l-4 border-emerald-300 pl-4">
+              <p className="font-medium text-primary italic border-l-4 border-primary/30 pl-4">
                 "Segala puji bagi Allah Subhanahu wa Ta’ala, yang telah
                 melimpahkan rahmat, nikmat, serta hidayah-Nya kepada kita semua.
                 Shalawat dan salam semoga tercurah kepada junjungan kita, Nabi
@@ -85,7 +88,7 @@ const Seaction__greeting = () => {
               </div>
 
               <div className="pt-6">
-                <p className="font-bold text-emerald-900">
+                <p className="font-bold text-primary-950">
                   Wassalamu’alaikum warahmatullahi wabarakatuh.
                 </p>
                 {/* <div className="mt-8 flex items-center gap-4">

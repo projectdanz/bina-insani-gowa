@@ -13,10 +13,9 @@ const About = () => {
   ];
 
   const missionItems = [
-    "Mencetak lulusan yang mempunyai kepribadian islam, memahami aqidah islam, Pendidikan karakter seni dan keterempilan",
-    "Mengembangan Kemandirian anak melalui kegiatan life skil.",
-    "Melatih mengembangkan kecerdasan anak dalam berfikir dan berucap",
-    "Menyelenggarakan proses pembelajaran yang kreatif dan menyenangkan.",
+    "Menyelenggarakan pendidikan yang mengintegrasikan nilai-nilai Islam",
+    "Membiasakan penggunaan bahasa  Inggris dan bahasa Arab  dalam aktivitas pembelajaran dan keseharian.",
+    "Menanamkan kecintaan terhadap Al-Qur’an melalui pembelajaran tajwid, tahfidz, dan tadabbur.",
   ];
 
   const tkPrograms = [
@@ -43,9 +42,9 @@ const About = () => {
   return (
     <div className="pt-24 pb-20 overflow-x-hidden">
       {/* Page Header (Hero Lite) */}
-      <section className="bg-emerald-950 py-20 relative overflow-hidden">
+      <section className="bg-[#0A7D54] py-20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-400 rounded-full blur-[120px]"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary rounded-full blur-[120px]"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.h1
@@ -53,13 +52,13 @@ const About = () => {
             animate={{ opacity: 1, scale: 1 }}
             className="text-4xl md:text-6xl font-black text-white mb-6"
           >
-            Tentang <span className="text-amber-400">Kami</span>
+            Tentang Kami
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-emerald-100/70 text-lg md:text-xl max-w-2xl mx-auto"
+            className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto"
           >
             Membangun generasi Qur'ani yang berwawasan global melalui pendidikan
             Islam yang berkualitas dan profesional.
@@ -78,13 +77,13 @@ const About = () => {
               className="w-full lg:w-1/2"
             >
               <div className="relative">
-                <div className="absolute -inset-4 bg-emerald-600/5 rounded-3xl -rotate-2"></div>
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-emerald-100 aspect-video flex items-center justify-center">
+                <div className="absolute -inset-4 bg-primary/5 rounded-3xl -rotate-2"></div>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-primary/5 aspect-video flex items-center justify-center">
                   {/* <img src={hero_location} alt="" /> */}
-                  <div className="absolute inset-0 bg-emerald-900/10 flex items-center justify-center">
-                    <History size={64} className="text-emerald-800/20" />
+                  <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
+                    <History size={64} className="text-primary/20" />
                   </div>
-                  <p className="absolute bottom-6 left-6 text-emerald-800 font-bold bg-white/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-sm">
+                  <p className="absolute bottom-6 left-6 text-primary font-bold bg-white/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-sm">
                     Didirikan Tahun 2020
                   </p>
                 </div>
@@ -107,11 +106,11 @@ const About = () => {
                   menaungi jenjang Taman Kanak-Kanak (TK) dan Sekolah Dasar
                   Islam Terpadu (SDIT).
                 </p>
-                <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 mb-4">
-                  <p className="text-emerald-900 font-bold flex items-center gap-2">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
+                <div className="bg-primary/5 p-6 rounded-2xl border border-primary/10 mb-4">
+                  <p className="text-primary font-bold flex items-center gap-2">
+                    <span className="w-2 h-2 bg-secondary rounded-full"></span>
                     Kurikulum yang digunakan:{" "}
-                    <span className="text-emerald-700">Kurikulum Merdeka</span>
+                    <span className="text-primary">Kurikulum Merdeka</span>
                   </p>
                 </div>
                 <p>
@@ -134,7 +133,7 @@ const About = () => {
 
       {/* Flagship Programs */}
       <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-50 rounded-full blur-3xl opacity-50 -mr-48 -mt-48"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl opacity-50 -mr-48 -mt-48"></div>
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <SectionHeader
             title="Program Unggulan"
@@ -149,7 +148,7 @@ const About = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="inline-block px-4 py-1 rounded bg-amber-100 text-amber-700 font-bold text-sm tracking-widest uppercase">
+              <div className="inline-block px-4 py-1 rounded bg-secondary/10 text-secondary font-bold text-sm tracking-widest uppercase">
                 TK Islam Bina Insani
               </div>
               <div className="grid grid-cols-1 gap-4">
@@ -160,12 +159,12 @@ const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.05 }}
-                    className="flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-100 shadow-sm hover:border-amber-200 hover:bg-amber-50 transition-all group"
+                    className="flex items-center gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-soft hover:shadow-premium hover:border-secondary/20 hover:bg-secondary/5 transition-all group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-sm group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                    <div className="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold text-sm group-hover:bg-secondary group-hover:text-white transition-colors">
                       {index + 1}
                     </div>
-                    <span className="text-gray-700 font-medium">{item}</span>
+                    <span className="text-gray-700 font-bold">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -178,7 +177,7 @@ const About = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="inline-block px-4 py-1 rounded bg-emerald-100 text-emerald-700 font-bold text-sm tracking-widest uppercase">
+              <div className="inline-block px-4 py-1.5 rounded-lg bg-primary/10 text-primary font-black text-xs tracking-[0.2em] uppercase">
                 SDIT Islam Bina Insani
               </div>
               <div className="grid grid-cols-1 gap-4">
@@ -189,12 +188,12 @@ const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.05 }}
-                    className="flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-100 shadow-sm hover:border-emerald-200 hover:bg-emerald-50 transition-all group"
+                    className="flex items-center gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-soft hover:shadow-premium hover:border-primary/20 hover:bg-primary/5 transition-all group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm group-hover:bg-primary group-hover:text-white transition-colors">
                       {index + 1}
                     </div>
-                    <span className="text-gray-700 font-medium">{item}</span>
+                    <span className="text-gray-700 font-bold">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -204,7 +203,7 @@ const About = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="py-24 bg-emerald-50">
+      <section className="py-24 bg-primary/5">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <SectionHeader title="Visi & Misi" subtitle="Tujuan Kami" />
 
@@ -214,17 +213,15 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-10 rounded-3xl shadow-sm border border-emerald-100"
+              className="bg-white p-10 rounded-[2.5rem] shadow-premium border border-primary/5"
             >
-              <div className="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-600 mb-8">
+              <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-8 shadow-inner">
                 <Eye size={32} />
               </div>
-              <h3 className="text-3xl font-black text-emerald-950 mb-6">
-                Visi
-              </h3>
-              <p className="text-xl text-emerald-800/80 leading-relaxed font-medium italic border-l-4 border-amber-400 pl-6">
-                "Terwujudnya generasi yang berkepribadian islam, memasuki
-                jenjang Pendidikan dasar dengan lebih baik"
+              <h3 className="text-3xl font-black text-primary mb-6">Visi</h3>
+              <p className="text-xl text-primary/80 leading-relaxed font-bold italic border-l-4 border-secondary pl-6">
+                "Terwujudnya generasi yang berkepribadian Islam, yang menguasai
+                ilmu pengetahuan dan mampu menghadapi tantangan zaman."
               </p>
             </motion.div>
 
@@ -234,20 +231,21 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-emerald-900 p-10 rounded-3xl shadow-xl shadow-emerald-900/10 text-white"
+              className="bg-primary p-10 rounded-[2.5rem] shadow-premium text-white relative overflow-hidden"
             >
-              <div className="w-16 h-16 bg-emerald-800 rounded-2xl flex items-center justify-center text-emerald-300 mb-8">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-tertiary mb-8 shadow-inner relative z-10">
                 <Target size={32} />
               </div>
-              <h3 className="text-3xl font-black mb-6">Misi</h3>
+              <h3 className="text-3xl font-black mb-6 relative z-10">Misi</h3>
               <ul className="space-y-4">
                 {missionItems.map((item, index) => (
                   <li key={index} className="flex gap-3 items-start">
                     <CheckCircle2
                       size={24}
-                      className="text-emerald-400 shrink-0 mt-0.5"
+                      className="text-tertiary shrink-0 mt-0.5"
                     />
-                    <span className="text-emerald-50/80 text-lg leading-tight">
+                    <span className="text-white/80 text-lg leading-tight">
                       {item}
                     </span>
                   </li>
@@ -260,7 +258,7 @@ const About = () => {
 
       {/* Improvement Strategy Section */}
       <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-50 -mr-48 -mb-48"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-50 -mr-48 -mb-48"></div>
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="w-full lg:w-1/2">
@@ -275,15 +273,15 @@ const About = () => {
                 melakukan peningkatan mutu pendidikan melalui berbagai langkah
                 strategis.
               </p>
-              <div className="p-8 bg-emerald-50 rounded-3xl border border-emerald-100 flex items-center gap-6">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-emerald-600 shadow-sm">
+              <div className="p-8 bg-primary/5 rounded-3xl border border-primary/10 flex items-center gap-6">
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary shadow-sm">
                   <TrendingUp size={32} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-emerald-900 text-xl">
+                  <h4 className="font-bold text-primary text-xl">
                     Komitmen Ke Depan
                   </h4>
-                  <p className="text-emerald-700/70">
+                  <p className="text-primary/70">
                     Terus beradaptasi dengan perkembangan zaman & sinergi dengan
                     orang tua.
                   </p>
@@ -298,12 +296,14 @@ const About = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm flex gap-4 items-center group hover:bg-emerald-50 hover:border-emerald-200 transition-all cursor-default"
+                  className="p-6 bg-white rounded-2xl border border-gray-100 shadow-soft flex gap-5 items-center group hover:bg-primary/5 hover:border-primary/20 hover:shadow-premium transition-all cursor-default"
                 >
-                  <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary font-black shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                     {index + 1}
                   </div>
-                  <span className="text-gray-700 font-medium">{item}</span>
+                  <span className="text-gray-700 font-bold leading-tight">
+                    {item}
+                  </span>
                 </motion.div>
               ))}
             </div>
