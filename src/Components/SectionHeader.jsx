@@ -19,8 +19,8 @@ const SectionHeader = ({
         viewport={{ once: true }}
         className={`inline-block px-4 py-1.5 rounded-full mb-4 text-xs font-bold uppercase tracking-widest ${
           light
-            ? "bg-white/10 text-emerald-300 border border-white/20"
-            : "bg-emerald-100 text-emerald-700"
+            ? "bg-white/10 text-tertiary border border-white/20"
+            : "bg-primary/10 text-primary"
         }`}
       >
         {subtitle}
@@ -31,7 +31,7 @@ const SectionHeader = ({
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
         className={`text-3xl md:text-5xl font-black leading-tight ${
-          light ? "text-white" : "text-emerald-950"
+          light ? "text-white" : "text-primary-950"
         }`}
       >
         {title}

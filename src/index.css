@@ -1,7 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #146151;
-  --color-accent: #FBC02E;
-  --color-white: #FFFFFF;
+  --color-primary: #0a7d54;
+  --color-secondary: #434393;
+  --color-tertiary: #0996d9;
+  --color-white: #ffffff;
+
+  --shadow-premium: 0 20px 50px -25px rgba(0, 0, 0, 0.3);
+  --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+@utility glass {
+  @apply backdrop-blur-md bg-white/70 border border-white/20 shadow-soft;
+}
+
+@utility glass-dark {
+  @apply backdrop-blur-md bg-black/40 border border-white/10 shadow-2xl;
 }

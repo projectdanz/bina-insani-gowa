@@ -17,9 +17,10 @@ const Seaction__main = () => {
           alt="Bina Insani Gowa Hero"
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/50"></div>
         {/* Modern Multi-layer Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/90 via-emerald-900/60 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/40 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
       </motion.div>
 
       {/* Content Container */}
@@ -30,19 +31,19 @@ const Seaction__main = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-block px-4 py-1.5 rounded-full bg-amber-400/20 border border-amber-400/30 backdrop-blur-md text-amber-400 text-sm font-bold tracking-widest uppercase mb-4">
+            {/* <div className="inline-block px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/30 backdrop-blur-md text-secondary text-sm font-bold tracking-widest uppercase mb-4">
               Selamat Datang di Sekolah Kami
-            </div>
+            </div> */}
 
-            <h1 className="text-4xl md:text-7xl font-black text-white leading-tight tracking-tight mb-2 drop-shadow-xl">
+            <h1 className="text-5xl md:text-8xl font-black text-primary leading-[1.1] tracking-tight mb-4 drop-shadow-2xl">
               Sekolah Islam <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">
+              <span className="text-white drop-shadow-lg">
                 Bina Insani Gowa
               </span>
             </h1>
 
-            <div className="text-lg md:text-2xl font-medium text-emerald-50/90 leading-relaxed max-w-2xl mt-4 border-l-4 border-amber-400 pl-6 lg:pl-8 italic">
-              <p>
+            <div className="text-lg md:text-2xl font-medium text-white/95 leading-relaxed max-w-2xl mt-8 border-l-4 border-primary pl-6 lg:pl-10 italic backdrop-blur-sm bg-black/5 py-4 rounded-r-2xl">
+              <p className="text-white">
                 "Membangun Generasi Beriman yang Menguasai Pengetahuan dan Mampu
                 Menghadapi Tantangan Zaman"
               </p>
@@ -53,13 +54,13 @@ const Seaction__main = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap gap-4 pt-6"
+            className="flex flex-col sm:flex-row gap-4 pt-8"
           >
             <Button
-              variant="accent"
+              variant="purple"
               size="lg"
               to="/about"
-              className="group"
+              className="group w-full sm:w-auto justify-center"
               rightIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +84,7 @@ const Seaction__main = () => {
               variant="light"
               size="lg"
               to="/contact"
-              className="!bg-white/10 !border-white/20 !text-white hover:!bg-white/20"
+              className="w-full sm:w-auto justify-center !bg-white/10 !border-white/20 !text-white hover:!bg-white/20"
             >
               Hubungi Kami
             </Button>
@@ -94,11 +95,11 @@ const Seaction__main = () => {
       {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
         <svg
-          className="relative block w-full h-[60px] text-white fill-current"
+          className="relative block w-full h-[80px] md:h-[120px] text-white fill-current"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C58.47,103.4,124.3,114.54,192,112.55,256.35,110.66,277,88,321.39,56.44Z"></path>
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
         </svg>
       </div>
     </section>

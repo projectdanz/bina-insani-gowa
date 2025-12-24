@@ -1,17 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Mail,
-  Phone,
-  MessageCircle,
-  Youtube,
-  Instagram,
-  Music,
-  Heart,
-  Send,
-  MapPin,
-} from "lucide-react";
+import { Mail, Phone, MessageCircle, Heart, Send, MapPin } from "lucide-react";
 import Button from "../../Components/Button";
+import { FaTiktok, FaYoutube, FaInstagram } from "react-icons/fa6";
 import SectionHeader from "../../Components/SectionHeader";
 
 const Contact = () => {
@@ -33,8 +24,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      value: "islambinainsanis@gmail.com",
-      href: "mailto:islambinainsanis@gmail.com",
+      value: "isekolahislambinainsani@gmail.com",
+      href: "mailto:isekolahislambinainsani@gmail.com",
       color: "bg-blue-50 text-blue-600",
     },
     {
@@ -42,36 +33,36 @@ const Contact = () => {
       label: "Telepon",
       value: "0812-4244-4227",
       href: "tel:081242444227",
-      color: "bg-amber-50 text-amber-600",
+      color: "bg-secondary/10 text-secondary",
     },
   ];
 
   const socialMedia = [
     {
-      icon: <Youtube />,
+      icon: <FaYoutube />,
       label: "YouTube",
       name: "Sekolah Islam Bina Insani",
-      href: "#",
+      href: "https://www.instagram.com/sekolah.islam.bina.insani?igsh=MWFpcDJkdmV3aW55Zg==",
     },
     {
-      icon: <Instagram />,
+      icon: <FaInstagram />,
       label: "Instagram",
       name: "Sekolah Islam Bina Insani",
-      href: "#",
+      href: "https://www.instagram.com/sekolah.islam.bina.insani?igsh=MWFpcDJkdmV3aW55Zg==",
     },
     {
-      icon: <Music />,
+      icon: <FaTiktok />,
       label: "TikTok",
       name: "Sekolah Islam Bina Insani",
-      href: "#",
+      href: "https://www.tiktok.com/@sekolahislambinainsani?_r=1&_t=ZS-92PRqnyAJj5",
     },
   ];
 
   return (
     <div className="pt-24 pb-20 overflow-x-hidden">
       {/* Contact Hero */}
-      <section className="bg-emerald-50 py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-60 -mr-48 -mt-48"></div>
+      <section className="bg-[#0A7D54]/40 py-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-60 -mr-48 -mt-48"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <SectionHeader title="Hubungi Kami" subtitle="Kontak & Informasi" />
           <p className="text-gray-600 text-lg max-w-2xl mx-auto -mt-8">
@@ -88,7 +79,7 @@ const Contact = () => {
             {/* Contact Info Grid */}
             <div className="w-full lg:w-1/2 space-y-12">
               <div>
-                <h3 className="text-2xl font-black text-emerald-950 mb-8 border-l-4 border-emerald-500 pl-4">
+                <h3 className="text-2xl font-black text-primary-950 mb-8 border-l-4 border-primary pl-4">
                   Layanan Cepat
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -100,19 +91,19 @@ const Contact = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
-                      className="p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all group"
+                      className="p-8 rounded-[2rem] bg-white border border-gray-100 shadow-soft hover:shadow-premium hover:border-primary/20 transition-all group"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <div
-                        className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${info.color}`}
+                        className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 shadow-inner ${info.color}`}
                       >
                         {info.icon}
                       </div>
-                      <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">
+                      <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-2">
                         {info.label}
                       </p>
-                      <p className="text-emerald-900 font-bold break-words">
+                      <p className="text-primary-950 font-black text-lg break-words">
                         {info.value}
                       </p>
                     </motion.a>
@@ -121,7 +112,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl font-black text-emerald-950 mb-8 border-l-4 border-emerald-500 pl-4">
+                <h3 className="text-2xl font-black text-primary-950 mb-8 border-l-4 border-primary pl-4">
                   Media Sosial
                 </h3>
                 <div className="flex flex-wrap gap-4">
@@ -130,7 +121,7 @@ const Contact = () => {
                       key={index}
                       href={social.href}
                       whileHover={{ y: -5 }}
-                      className="flex items-center gap-3 px-6 py-3 rounded-full bg-emerald-50 text-emerald-700 font-bold border border-emerald-100 hover:bg-emerald-600 hover:text-white transition-all shadow-sm"
+                      className="flex items-center gap-3 px-6 py-3 rounded-full bg-primary/5 text-primary font-bold border border-primary/10 hover:bg-primary hover:text-white transition-all shadow-sm"
                     >
                       {social.icon}
                       <span>{social.label}</span>
@@ -145,39 +136,61 @@ const Contact = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="w-full lg:w-1/2 bg-white rounded-[2.5rem] shadow-2xl shadow-emerald-900/10 border border-emerald-50 p-8 md:p-12"
+              className="w-full lg:w-1/2 bg-white rounded-[3rem] shadow-premium border border-primary/5 p-10 md:p-14"
             >
-              <h3 className="text-2xl font-black text-emerald-950 mb-8">
+              <h3 className="text-3xl font-black text-primary-950 mb-10 border-l-4 border-primary pl-6">
                 Kirim Pesan
               </h3>
-              <form className="space-y-6">
+              <form
+                className="space-y-6"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const { name, whatsapp, subject, message } =
+                    Object.fromEntries(formData.entries());
+                  const text = `Halo Admin Bina Insani,\n\nNama: ${name}\nWA: ${whatsapp}\nSubjek: ${subject}\n\nPesan:\n${message}`;
+                  window.open(
+                    `https://wa.me/6285936572722?text=${encodeURIComponent(
+                      text
+                    )}`,
+                    "_blank"
+                  );
+                }}
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-emerald-900 ml-1">
+                    <label className="text-sm font-bold text-primary-950 ml-1">
                       Nama Lengkap
                     </label>
                     <input
+                      name="name"
                       type="text"
-                      className="w-full px-6 py-4 rounded-2xl bg-emerald-50 border-transparent focus:bg-white focus:border-emerald-500 transition-all outline-none text-emerald-950 placeholder-emerald-800/20"
+                      required
+                      className="w-full px-6 py-4 rounded-2xl bg-primary/5 border-transparent focus:bg-white focus:border-primary transition-all outline-none text-primary-950 placeholder-primary-900/20"
                       placeholder="Ananda/Bapak/Ibu"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-emerald-900 ml-1">
+                    <label className="text-sm font-bold text-primary-950 ml-1">
                       Nomor WA
                     </label>
                     <input
+                      name="whatsapp"
                       type="tel"
-                      className="w-full px-6 py-4 rounded-2xl bg-emerald-50 border-transparent focus:bg-white focus:border-emerald-500 transition-all outline-none text-emerald-950 placeholder-emerald-800/20"
+                      required
+                      className="w-full px-6 py-4 rounded-2xl bg-primary/5 border-transparent focus:bg-white focus:border-primary transition-all outline-none text-primary-950 placeholder-primary-900/20"
                       placeholder="0812..."
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-emerald-900 ml-1">
+                  <label className="text-sm font-bold text-primary-950 ml-1">
                     Subjek
                   </label>
-                  <select className="w-full px-6 py-4 rounded-2xl bg-emerald-50 border-transparent focus:bg-white focus:border-emerald-500 transition-all outline-none text-emerald-950 appearance-none">
+                  <select
+                    name="subject"
+                    className="w-full px-6 py-4 rounded-2xl bg-primary/5 border-transparent focus:bg-white focus:border-primary transition-all outline-none text-primary-950 appearance-none"
+                  >
                     <option>Informasi Pendaftaran</option>
                     <option>Kerjasama</option>
                     <option>Kritik & Saran</option>
@@ -185,19 +198,22 @@ const Contact = () => {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-emerald-900 ml-1">
+                  <label className="text-sm font-bold text-primary-950 ml-1">
                     Pesan
                   </label>
                   <textarea
+                    name="message"
                     rows="4"
-                    className="w-full px-6 py-4 rounded-2xl bg-emerald-50 border-transparent focus:bg-white focus:border-emerald-500 transition-all outline-none text-emerald-950 placeholder-emerald-800/20"
+                    required
+                    className="w-full px-8 py-5 rounded-2xl bg-primary/5 border-2 border-transparent focus:bg-white focus:border-primary transition-all outline-none text-primary-950 placeholder-primary-900/20 shadow-inner"
                     placeholder="Tuliskan pesan Anda di sini..."
                   ></textarea>
                 </div>
                 <Button
+                  type="submit"
                   variant="primary"
                   size="lg"
-                  className="w-full py-5 rounded-2xl shadow-xl shadow-emerald-600/20 group"
+                  className="w-full py-5 rounded-2xl shadow-xl shadow-primary/20 group"
                   rightIcon={
                     <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   }
@@ -241,7 +257,7 @@ const Contact = () => {
                   bantuan kemanusiaan, medis, dan pangan.
                 </p>
 
-                <div className="space-y-4 mb-10">
+                {/* <div className="space-y-4 mb-10">
                   <div className="p-6 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
                     <div>
                       <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">
@@ -258,20 +274,20 @@ const Contact = () => {
                       Salin
                     </button>
                   </div>
-                </div>
+                </div> */}
 
-                <Button
-                  variant="accent"
-                  size="lg"
-                  className="shadow-red-500/20"
-                >
-                  Konfirmasi Donasi
-                </Button>
+                {/* <Button
+                    variant="accent"
+                    size="lg"
+                    className="shadow-red-500/20"
+                  >
+                    Konfirmasi Donasi
+                  </Button> */}
               </div>
 
               {/* Decorative side */}
               <div className="w-full lg:w-1/2 p-12 lg:p-20 flex justify-center lg:justify-end">
-                <div className="relative w-full max-w-sm aspect-square bg-emerald-950/30 rounded-[3rem] border border-white/5 flex items-center justify-center">
+                <div className="relative w-full max-w-sm aspect-square bg-primary-950/30 rounded-[3rem] border border-white/5 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-red-600/40">
                       <Heart size={48} className="text-white fill-current" />
@@ -303,11 +319,11 @@ const Contact = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-            <div className="absolute bottom-8 right-8 bg-white p-6 rounded-2xl shadow-2xl max-w-xs border border-emerald-50">
+            <div className="absolute bottom-8 right-8 bg-white p-6 rounded-2xl shadow-2xl max-w-xs border border-primary/10">
               <div className="flex gap-4 items-start">
-                <MapPin className="text-emerald-600 shrink-0 mt-1" />
+                <MapPin className="text-primary shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-bold text-emerald-950">Alamat Utama</h4>
+                  <h4 className="font-bold text-primary-950">Alamat Utama</h4>
                   <p className="text-sm text-gray-500 leading-relaxed">
                     Jl. Pallantikang 1, Tombolo, Somba Opu, Kabupaten Gowa,
                     Sulawesi Selatan
