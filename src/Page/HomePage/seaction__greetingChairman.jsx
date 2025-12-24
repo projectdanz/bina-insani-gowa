@@ -30,11 +30,11 @@ const Seaction__greetingChairman = () => {
                   />
                 </div>
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border-l-4 border-secondary">
-                <p className="text-primary-950 font-bold text-lg leading-tight">
+              <div className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 bg-white p-4 sm:p-6 rounded-xl shadow-xl border-l-4 border-secondary max-w-[80%] sm:max-w-none">
+                <p className="text-primary-950 font-bold text-sm sm:text-lg leading-tight">
                   H. Andi Emil Salim, SE, M.Ak
                 </p>
-                <p className="text-secondary text-sm font-medium">
+                <p className="text-secondary text-xs sm:text-sm font-medium">
                   Ketua Yayasan
                 </p>
               </div>
@@ -54,7 +54,7 @@ const Seaction__greetingChairman = () => {
                 Sambutan Ketua Yayasan
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-black text-primary-950 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-black text-primary-950 leading-tight">
                 Membangun Generasi Madani Berbasis Al-Qur'an
               </h2>
 

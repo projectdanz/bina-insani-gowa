@@ -11,6 +11,7 @@ import logoImg from "../assets/image/icon/iconBinaInsani.png";
 const Navbar = ({ links = [], logo, className = "" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeHash, setActiveHash] = useState("");
   const location = useLocation();
 
   useEffect(() => {
@@ -95,14 +96,15 @@ const Navbar = ({ links = [], logo, className = "" }) => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center pr-2">
             <button
               onClick={toggleMenu}
               className={`p-2.5 rounded-xl transition-all duration-300 ${
                 scrolled || isLightPage
-                  ? "text-primary bg-primary/5 hover:bg-primary/10"
-                  : "text-white bg-white/10 hover:bg-white/20 backdrop-blur-md"
+                  ? "text-primary bg-primary/5 hover:bg-primary/10 active:scale-90"
+                  : "text-white bg-white/10 hover:bg-white/20 backdrop-blur-md active:scale-90"
               }`}
+              aria-label="Toggle Menu"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
@@ -127,12 +129,12 @@ const Navbar = ({ links = [], logo, className = "" }) => {
           onClick={toggleMenu}
         />
         <div
-          className={`absolute right-4 top-24 w-[calc(100%-2rem)] max-w-sm bg-white rounded-[2rem] shadow-premium overflow-hidden border border-white/50 transition-all duration-500 transform ${
+          className={`absolute right-4 top-20 w-[calc(100%-2rem)] max-w-sm bg-white rounded-[2rem] shadow-premium overflow-hidden border border-white/50 transition-all duration-500 transform ${
             isOpen ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
           }`}
         >
-          <div className="p-8 space-y-4">
-            <div className="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-2 px-2">
+          <div className="p-6 space-y-3">
+            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-2 px-3">
               Menu Utama
             </div>
             {links.map((link, index) => {
@@ -142,10 +144,10 @@ const Navbar = ({ links = [], logo, className = "" }) => {
                   key={index}
                   variant="ghost"
                   to={link.href}
-                  className={`!justify-start text-lg w-full !px-6 !py-4 rounded-2xl transition-all ${
+                  className={`!justify-start text-base w-full !px-5 !py-3.5 rounded-2xl transition-all ${
                     isActive
                       ? "text-primary bg-primary/10 font-black shadow-sm"
-                      : "text-gray-600 font-bold"
+                      : "text-gray-600 font-bold hover:bg-gray-50"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -153,12 +155,12 @@ const Navbar = ({ links = [], logo, className = "" }) => {
                 </Button>
               );
             })}
-            <div className="pt-6 mt-6 border-t border-gray-100">
+            <div className="pt-4 mt-2 border-t border-gray-100">
               <Button
                 variant="primary"
                 to="/contact"
                 size="lg"
-                className="w-full shadow-premium rounded-2xl"
+                className="w-full shadow-premium rounded-2xl py-4"
                 onClick={() => setIsOpen(false)}
               >
                 Daftar Sekarang

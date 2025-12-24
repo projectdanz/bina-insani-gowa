@@ -95,7 +95,7 @@ const Seaction__activities = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-black text-primary-950 leading-tight"
+              className="text-3xl md:text-5xl font-black text-primary-950 leading-tight"
             >
               Momen Seru di <span className="text-primary">Bina Insani</span>
             </motion.h2>
