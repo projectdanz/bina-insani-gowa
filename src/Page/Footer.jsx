@@ -55,7 +55,7 @@ const Footer = () => {
                 alt="Bina Insani Logo"
                 className="h-12 w-12 object-contain"
               />
-              <div className="text-3xl font-black tracking-tight">
+              <div className="text-2xl sm:text-3xl font-black tracking-tight">
                 Bina Insani
               </div>
             </Link>
@@ -123,16 +123,16 @@ const Footer = () => {
         </div>
 
         {/* Action Banner */}
-        <div className="bg-primary/10 border border-primary/20 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 mb-20">
-          <div className="flex items-center gap-6">
-            <div className="w-14 h-14 bg-secondary rounded-2xl flex items-center justify-center text-white shadow-lg shadow-secondary/20">
+        <div className="bg-primary/10 border border-primary/20 p-6 sm:p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 mb-20">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 text-center sm:text-left">
+            <div className="w-14 h-14 bg-secondary rounded-2xl flex items-center justify-center text-white shadow-lg shadow-secondary/20 shrink-0">
               <MessageCircle size={28} />
             </div>
             <div>
-              <h4 className="text-xl font-bold text-white">
+              <h4 className="text-lg sm:text-xl font-bold text-white">
                 Butuh informasi pendaftaran?
               </h4>
-              <p className="text-white/60">
+              <p className="text-white/60 text-sm">
                 Hubungi admin kami untuk konsultasi gratis.
               </p>
             </div>
@@ -140,7 +140,7 @@ const Footer = () => {
           <Button
             variant="accent"
             to="/contact"
-            className="shadow-secondary/10"
+            className="w-full md:w-auto shadow-secondary/10 py-4 justify-center"
             onClick={() => window.open("https://wa.me/6281234567890", "_blank")}
           >
             Hubungi Sekarang

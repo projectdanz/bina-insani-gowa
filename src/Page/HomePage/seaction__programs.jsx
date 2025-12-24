@@ -52,7 +52,7 @@ const Seaction__programs = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-black mb-6 leading-tight"
+            className="text-3xl md:text-5xl font-black mb-6 leading-tight"
           >
             Mengapa Memilih <br />
             <span className="text-secondary">Bina Insani Gowa?</span>
@@ -105,28 +105,27 @@ const Seaction__programs = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-20 p-10 rounded-[2.5rem] bg-gradient-to-r from-secondary to-tertiary shadow-2xl shadow-secondary/20 text-white flex flex-col md:flex-row items-center justify-between gap-8"
+          className="mt-16 md:mt-20 p-8 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-gradient-to-br from-secondary to-tertiary shadow-2xl shadow-secondary/20 text-white flex flex-col md:flex-row items-center justify-between gap-8"
         >
-          <div className="max-w-xl">
-            <h3 className="text-3xl font-black mb-2">
+          <div className="max-w-xl text-center md:text-left">
+            <h3 className="text-2xl md:text-3xl font-black mb-3">
               Ingin tahu lebih banyak?
             </h3>
-            <p className="text-white/80 font-medium text-lg leading-relaxed">
-              Dapatkan informasi lengkap mengenai kurikulum, pendaftaran, dan
-              rincian program setiap jenjang (TK & SDIT) dengan menghubungi
-              kami.
+            <p className="text-white/80 font-medium text-base md:text-lg leading-relaxed">
+              Dapatkan informasi lengkap mengenai kurikulum dan pendaftaran
+              setiap jenjang dengan menghubungi kami.
             </p>
           </div>
-          <div className="shrink-0">
+          <div className="shrink-0 w-full md:w-auto">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() =>
                 window.open("https://wa.me/6281234567890", "_blank")
               }
-              className="px-10 py-5 bg-primary-950 text-white rounded-2xl font-bold text-lg shadow-xl hover:bg-primary-900 transition-all"
+              className="w-full md:w-auto px-8 py-4 bg-primary-950 text-white rounded-2xl font-bold text-lg shadow-xl hover:bg-primary-900 transition-all flex items-center justify-center gap-2"
             >
-              Hubungi Admin <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              Hubungi Admin <ArrowRight className="w-5 h-5" />
             </motion.button>
           </div>
         </motion.div>

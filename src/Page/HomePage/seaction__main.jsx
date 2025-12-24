@@ -35,15 +35,15 @@ const Seaction__main = () => {
               Selamat Datang di Sekolah Kami
             </div> */}
 
-            <h1 className="text-5xl md:text-8xl font-black text-primary leading-[1.1] tracking-tight mb-4 drop-shadow-2xl">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-primary leading-[1.1] tracking-tight mb-4 drop-shadow-2xl">
               Sekolah Islam <br />
               <span className="text-white drop-shadow-lg">
                 Bina Insani Gowa
               </span>
             </h1>
 
-            <div className="text-lg md:text-2xl font-medium text-white/95 leading-relaxed max-w-2xl mt-8 border-l-4 border-primary pl-6 lg:pl-10 italic backdrop-blur-sm bg-black/5 py-4 rounded-r-2xl">
-              <p className="text-white">
+            <div className="text-md sm:text-xl md:text-2xl font-medium text-white/95 leading-relaxed max-w-2xl mt-8 border-l-4 border-primary pl-4 sm:pl-6 lg:pl-10 italic backdrop-blur-sm bg-black/10 py-4 sm:py-6 rounded-r-2xl">
+              <p className="text-white leading-relaxed">
                 "Membangun Generasi Beriman yang Menguasai Pengetahuan dan Mampu
                 Menghadapi Tantangan Zaman"
               </p>
