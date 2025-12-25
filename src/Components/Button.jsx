@@ -35,6 +35,8 @@ const Button = ({
   const variants = {
     primary:
       "bg-primary text-white border-2 border-primary hover:bg-transparent hover:text-primary shadow-premium hover:shadow-primary/40",
+    primary2:
+      "bg-primary text-white border-2 border-primary hover:bg-white hover:text-primary shadow-premium hover:shadow-primary/40",
     accent:
       "bg-secondary text-white border-2 border-secondary hover:bg-transparent hover:text-secondary shadow-premium hover:shadow-secondary/40",
     purple:
@@ -43,6 +45,7 @@ const Button = ({
       "bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white shadow-soft hover:shadow-primary/20",
     ghost: "bg-transparent text-primary hover:bg-primary/5 font-bold",
     ghost2: "bg-transparent text-[#434393] hover:bg-[#434393]/5 font-bold",
+    white: "bg-white text-primary border-2 border-white hover:bg-transparent hover:text-white shadow-premium hover:shadow-white/40",
     light:
       "bg-white text-primary border-2 border-white hover:bg-transparent hover:text-white shadow-premium hover:shadow-white/20",
   };

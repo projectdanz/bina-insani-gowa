@@ -40,7 +40,7 @@ const About = () => {
   ];
 
   return (
-    <div className="pt-24 pb-20 overflow-x-hidden">
+    <div className="pb-20 overflow-x-hidden">
       {/* Page Header (Hero Lite) */}
       <section className="bg-[#0A7D54] py-20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
@@ -50,7 +50,7 @@ const About = () => {
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-4xl md:text-6xl font-black text-white mb-6"
+            className="text-4xl md:text-6xl font-black text-white my-8"
           >
             Tentang Kami
           </motion.h1>
@@ -215,11 +215,11 @@ const About = () => {
               viewport={{ once: true }}
               className="bg-white p-10 rounded-[2.5rem] shadow-premium border border-primary/5"
             >
-              <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-8 shadow-inner">
+              <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center text-[#0a7d54] mb-8 shadow-inner">
                 <Eye size={32} />
               </div>
-              <h3 className="text-3xl font-black text-primary mb-6">Visi</h3>
-              <p className="text-xl text-primary/80 leading-relaxed font-bold italic border-l-4 border-secondary pl-6">
+              <h3 className="text-3xl font-black text-[#0a7d54] mb-6">Visi</h3>
+              <p className="text-xl text-[#0a7d54]/80 leading-relaxed font-bold italic border-l-4 border-[#0a7d54] pl-6">
                 "Terwujudnya generasi yang berkepribadian Islam, yang menguasai
                 ilmu pengetahuan dan mampu menghadapi tantangan zaman."
               </p>
@@ -234,7 +234,7 @@ const About = () => {
               className="bg-primary p-10 rounded-[2.5rem] shadow-premium text-white relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-tertiary mb-8 shadow-inner relative z-10">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-8 shadow-inner relative z-10">
                 <Target size={32} />
               </div>
               <h3 className="text-3xl font-black mb-6 relative z-10">Misi</h3>
@@ -243,7 +243,7 @@ const About = () => {
                   <li key={index} className="flex gap-3 items-start">
                     <CheckCircle2
                       size={24}
-                      className="text-tertiary shrink-0 mt-0.5"
+                      className="text-white shrink-0 mt-0.5"
                     />
                     <span className="text-white/80 text-lg leading-tight">
                       {item}

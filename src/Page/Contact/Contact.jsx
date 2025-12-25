@@ -24,8 +24,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      value: "isekolahislambinainsani@gmail.com",
-      href: "mailto:isekolahislambinainsani@gmail.com",
+      value: "sekolahislambinainsani@gmail.com",
+      href: "mailto:sekolahislambinainsani@gmail.com",
       color: "bg-blue-50 text-blue-600",
     },
     {
@@ -59,13 +59,13 @@ const Contact = () => {
   ];
 
   return (
-    <div className="pt-24 pb-20 overflow-x-hidden">
+    <div className="pb-20 overflow-x-hidden">
       {/* Contact Hero */}
-      <section className="bg-[#0A7D54]/40 py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-60 -mr-48 -mt-48"></div>
+      <section className="bg-[#0A7D54] py-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl opacity-60 -mr-48 -mt-48"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
-          <SectionHeader title="Hubungi Kami" subtitle="Kontak & Informasi" />
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto -mt-8">
+          <SectionHeader title="Hubungi Kami" subtitle="Kontak & Informasi" light={true} />
+          <p className="text-gray-200 text-lg max-w-2xl mx-auto -mt-8">
             Punya pertanyaan atau ingin mendaftarkan putra-putri Anda? Kami siap
             membantu memberikan informasi terbaik untuk masa depan Ananda.
           </p>
@@ -223,85 +223,6 @@ const Contact = () => {
               </form>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Donation Section (Palestine) */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-[3rem] overflow-hidden relative"
-          >
-            {/* Background Texture/Pattern */}
-            <div className="absolute inset-0 opacity-10 pointer-events-none">
-              <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent"></div>
-            </div>
-
-            <div className="flex flex-col lg:flex-row items-center relative z-10">
-              {/* Palestine Info */}
-              <div className="w-full lg:w-1/2 p-12 lg:p-20 text-white">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600/20 border border-red-500/30 text-red-500 text-xs font-black uppercase tracking-widest mb-8">
-                  <Heart size={14} className="fill-current" /> Bina Insani
-                  Peduli
-                </div>
-                <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-                  Donasi untuk <br />
-                  <span className="text-red-500">Palestina</span>
-                </h2>
-                <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-lg">
-                  Mari ulurkan tangan untuk saudara kita di Palestina. 100%
-                  donasi akan disalurkan melalui lembaga terpercaya untuk
-                  bantuan kemanusiaan, medis, dan pangan.
-                </p>
-
-                {/* <div className="space-y-4 mb-10">
-                  <div className="p-6 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
-                    <div>
-                      <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">
-                        Bank Transfer (BSI)
-                      </p>
-                      <p className="text-xl font-black tracking-wider">
-                        711 222 333 4
-                      </p>
-                      <p className="text-sm text-gray-400">
-                        a.n. Yayasan Bina Insani (Peduli Palestina)
-                      </p>
-                    </div>
-                    <button className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 font-bold transition-all text-sm">
-                      Salin
-                    </button>
-                  </div>
-                </div> */}
-
-                {/* <Button
-                    variant="accent"
-                    size="lg"
-                    className="shadow-red-500/20"
-                  >
-                    Konfirmasi Donasi
-                  </Button> */}
-              </div>
-
-              {/* Decorative side */}
-              <div className="w-full lg:w-1/2 p-12 lg:p-20 flex justify-center lg:justify-end">
-                <div className="relative w-full max-w-sm aspect-square bg-primary-950/30 rounded-[3rem] border border-white/5 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-red-600/40">
-                      <Heart size={48} className="text-white fill-current" />
-                    </div>
-                    <p className="text-2xl font-black text-white px-8">
-                      "Barang siapa yang melepaskan satu kesusahan seorang
-                      mukmin, maka Allah akan melepaskan satu kesusahan darinya
-                      di hari kiamat."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 

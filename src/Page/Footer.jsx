@@ -103,7 +103,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold text-white">Kontak Kami</h3>
             <div className="space-y-6">
               <div className="flex gap-4 items-start text-white/70">
-                <MapPin className="shrink-0 text-secondary mt-1" size={20} />
+                <MapPin className="shrink-0 text-white mt-1" size={20} />
                 <p className="text-sm leading-relaxed">
                   Jln. H.M.Yasin Limpo, Mutiara Indah Village Ruko C No 20,
                   <br />
@@ -111,11 +111,11 @@ const Footer = () => {
                 </p>
               </div>
               <div className="flex gap-4 items-center text-white/70">
-                <Phone className="shrink-0 text-secondary" size={20} />
+                <Phone className="shrink-0 text-white" size={20} />
                 <p className="text-sm">0812-4244-4227</p>
               </div>
               <div className="flex gap-4 items-center text-white/70">
-                <Mail className="shrink-0 text-secondary" size={20} />
+                <Mail className="shrink-0 text-white" size={20} />
                 <p className="text-sm">sekolahislambinainsani@gmail.com</p>
               </div>
             </div>
@@ -138,7 +138,7 @@ const Footer = () => {
             </div>
           </div>
           <Button
-            variant="accent"
+            variant="white"
             to="/contact"
             className="w-full md:w-auto shadow-secondary/10 py-4 justify-center"
             onClick={() => window.open("https://wa.me/6281234567890", "_blank")}
@@ -152,11 +152,11 @@ const Footer = () => {
           <p className="text-white/30 text-sm">
             © 2025 Sekolah Islam Bina Insani. Seluruh Hak Cipta Dilindungi.
           </p>
-          <div className="flex items-center gap-2 text-white/40 text-sm">
+          {/* <div className="flex items-center gap-2 text-white/40 text-sm">
             <span>Dibuat dengan</span>
             <Heart size={14} className="text-red-500 fill-current" />
             <span>Peduli Palestina</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
