@@ -112,7 +112,7 @@ const Footer = () => {
               </div>
               <div className="flex gap-4 items-center text-white/70">
                 <Phone className="shrink-0 text-white" size={20} />
-                <p className="text-sm">0812-4244-4227</p>
+                <p className="text-sm">0859-3657-2722</p>
               </div>
               <div className="flex gap-4 items-center text-white/70">
                 <Mail className="shrink-0 text-white" size={20} />
@@ -141,7 +141,7 @@ const Footer = () => {
             variant="white"
             to="/contact"
             className="w-full md:w-auto shadow-secondary/10 py-4 justify-center"
-            onClick={() => window.open("https://wa.me/6281234567890", "_blank")}
+            onClick={() => window.open("https://wa.me/6285936572722", "_blank")}
           >
             Hubungi Sekarang
           </Button>
