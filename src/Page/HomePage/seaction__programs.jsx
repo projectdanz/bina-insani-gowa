@@ -44,18 +44,18 @@ const Seaction__programs = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-tertiary text-xs font-bold uppercase tracking-widest mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-6"
           >
-            <Star size={14} className="fill-current" /> Unggulan Kami
+            <Star size={14} className="fill-primary" /> Unggulan Kami
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-black mb-6 leading-tight"
+            className="text-3xl md:text-5xl font-black text-primary mb-6 leading-tight"
           >
             Mengapa Memilih <br />
-            <span className="text-secondary">Bina Insani Gowa?</span>
+            <span className="text-gray-400">Bina Insani Gowa?</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
