@@ -107,7 +107,7 @@ const About = () => {
                   Islam Terpadu (SDIT).
                 </p>
                 <div className="bg-primary/5 p-6 rounded-2xl border border-primary/10 mb-4">
-                  <p className="text-primary font-bold flex items-center gap-2">
+                  <p className="text-primary font-bold flex flex-col md:flex-row items-center gap-2">
                     <span className="w-2 h-2 bg-secondary rounded-full"></span>
                     Kurikulum yang digunakan:{" "}
                     <span className="text-primary">Kurikulum Merdeka</span>

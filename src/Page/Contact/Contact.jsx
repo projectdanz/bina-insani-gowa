@@ -1,21 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MessageCircle, Heart, Send, MapPin } from "lucide-react";
+import { Mail, Phone, Heart, Send, MapPin } from "lucide-react";
 import Button from "../../Components/Button";
-import { FaTiktok, FaYoutube, FaInstagram } from "react-icons/fa6";
+import { FaTiktok, FaYoutube, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import SectionHeader from "../../Components/SectionHeader";
 
 const Contact = () => {
   const contactInfo = [
     {
-      icon: <MessageCircle className="w-6 h-6" />,
+      icon: <FaWhatsapp className="w-6 h-6" />,
       label: "WhatsApp Admin 1",
       value: "+62 859-3657-2722",
       href: "https://wa.me/+6285936572722",
       color: "bg-green-50 text-green-600",
     },
     {
-      icon: <MessageCircle className="w-6 h-6" />,
+      icon: <FaWhatsapp className="w-6 h-6" />,
       label: "WhatsApp Admin 2",
       value: "+62 812-4244-4227",
       href: "https://wa.me/+6281242444227",
