@@ -4,6 +4,7 @@ import Footer from "./Page/Footer";
 import Home from "./Page/HomePage/Home";
 import About from "./Page/About/About";
 import Contact from "./Page/Contact/Contact";
+import ScrollToTop from "./Components/ScrollToTop";
 
 const App = () => {
   const navLinks = [
@@ -14,6 +15,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <ScrollToTop />
       <Navbar links={navLinks} />
       <main className="flex-grow">
         <Routes>
