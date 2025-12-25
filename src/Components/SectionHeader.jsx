@@ -14,12 +14,12 @@ const SectionHeader = ({
       }`}
     >
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 20 }} 
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className={`inline-block px-4 py-1.5 rounded-full mb-4 text-xs font-bold uppercase tracking-widest ${
           light
-            ? "bg-white/10 text-tertiary border border-white/20"
+            ? "bg-white/10 text-white border border-white/20"
             : "bg-primary/10 text-primary"
         }`}
       >

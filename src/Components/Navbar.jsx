@@ -24,10 +24,11 @@ const Navbar = ({ links = [], logo, className = "" }) => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const isDarkPage =
-    location.pathname === "/about" || location.pathname === "/";
-  // On /contact, the hero is light green/white, so navbar should be dark variant when not scrolled
-  const isLightPage = location.pathname === "/contact";
+  // All main pages (/, /about, /contact) have dark green hero sections,
+  // so we want white text for the navbar when not scrolled.
+  const isDarkHeroPage = ["/", "/about", "/contact"].includes(
+    location.pathname
+  );
 
   return (
     <nav
@@ -55,7 +56,7 @@ const Navbar = ({ links = [], logo, className = "" }) => {
             {logo || (
               <div
                 className={`text-2xl font-black tracking-tight transition-colors duration-300 ${
-                  scrolled || isLightPage ? "text-primary" : "text-white"
+                  scrolled || !isDarkHeroPage ? "text-primary" : "text-white"
                 }`}
               >
                 Bina Insani
@@ -74,8 +75,8 @@ const Navbar = ({ links = [], logo, className = "" }) => {
                   to={link.href}
                   className={`!px-5 !py-2.5 rounded-xl transition-all duration-300 font-bold ${
                     isActive
-                      ? "text-primary bg-primary/10 shadow-sm"
-                      : scrolled || isLightPage
+                      ? "text-primary bg-white shadow-sm"
+                      : scrolled || !isDarkHeroPage
                       ? "text-gray-700 hover:text-primary hover:bg-primary/5"
                       : "text-white hover:text-white hover:bg-white/20"
                   }`}
@@ -86,7 +87,7 @@ const Navbar = ({ links = [], logo, className = "" }) => {
             })}
             <div className="ml-4 pl-4 border-l border-gray-200/50 h-8 flex items-center">
               <Button
-                variant="primary"
+                variant="primary2"
                 to="/contact"
                 className="shadow-premium hover:scale-105 active:scale-95"
               >
@@ -100,7 +101,7 @@ const Navbar = ({ links = [], logo, className = "" }) => {
             <button
               onClick={toggleMenu}
               className={`p-2.5 rounded-xl transition-all duration-300 ${
-                scrolled || isLightPage
+                scrolled || !isDarkHeroPage
                   ? "text-primary bg-primary/5 hover:bg-primary/10 active:scale-90"
                   : "text-white bg-white/10 hover:bg-white/20 backdrop-blur-md active:scale-90"
               }`}
