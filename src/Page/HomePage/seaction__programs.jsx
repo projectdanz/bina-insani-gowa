@@ -121,7 +121,7 @@ const Seaction__programs = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() =>
-                window.open("https://wa.me/6281234567890", "_blank")
+                window.open("https://wa.me/6285936572722", "_blank")
               }
               className="w-full md:w-auto px-8 py-4 bg-primary-950 text-white rounded-2xl font-bold text-lg shadow-xl hover:bg-primary-900 transition-all flex items-center justify-center gap-2"
             >
