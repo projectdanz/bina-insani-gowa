@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { History, Target, Eye, TrendingUp, CheckCircle2 } from "lucide-react";
 import SectionHeader from "../../Components/SectionHeader";
+import schoolFront from "../../assets/image/gambar_tampak_depan.jpeg";
 
 const About = () => {
   const improvements = [
@@ -78,11 +79,15 @@ const About = () => {
             >
               <div className="relative">
                 <div className="absolute -inset-4 bg-primary/5 rounded-3xl -rotate-2"></div>
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-primary/5 aspect-video flex items-center justify-center">
-                  {/* <img src={hero_location} alt="" /> */}
-                  <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
-                    <History size={64} className="text-primary/20" />
-                  </div>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-primary/5 aspect-video">
+                  <img
+                    src={schoolFront}
+                    alt="Tampak Depan Bina Insani Gowa"
+                    className="w-full h-full object-cover"
+                  />
+                  {/* <div className="absolute inset-0 bg-primary/10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    <History size={64} className="text-white/40" />
+                  </div> */}
                   <p className="absolute bottom-6 left-6 text-primary font-bold bg-white/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-sm">
                     Didirikan Tahun 2020
                   </p>
